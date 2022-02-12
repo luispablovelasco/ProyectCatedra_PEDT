@@ -26,11 +26,19 @@ namespace ProyectCatedra_PEDT_01
         {
             WindowState = FormWindowState.Maximized; //Esto hará que la ventana se maximize
             picboxmaximizar.Visible = false; //Ocultamos el boton cuando ya esté maximizado
+            picrestaurar.Visible = true;
         }
 
         private void picboxminimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized; //Esto hace que cuando se presione el icono, la ventana se minimize
+            picboxmaximizar.Visible = true;
+        }
+
+        private void picrestaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            picrestaurar.Visible = false;
             picboxmaximizar.Visible = true;
         }
     }
